@@ -78,6 +78,19 @@ pnpm stats     # 統計 faction 人數
 pnpm build     # 產生靜態網站
 ```
 
+## GitHub Pages 部署
+
+這個模板已提供 GitHub Actions workflow：`.github/workflows/pages.yml`。
+
+當 `main` 或 `master` 有新的 push 時，workflow 會：
+
+1. 安裝 pnpm 相依套件。
+2. 執行 `pnpm validate`。
+3. 執行 `pnpm build`。
+4. 將 `dist/` 部署到 GitHub Pages。
+
+Repo 第一次使用時，請到 GitHub repo 的 **Settings → Pages**，把 Source 設為 **GitHub Actions**。
+
 ## 你會看到的成果
 
 展示頁會讀取 `profiles/*.json`，產生：
