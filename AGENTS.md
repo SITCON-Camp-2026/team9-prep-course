@@ -31,6 +31,7 @@ The point is not to build a full product. The point is to practice giving contex
 - `tasks/`: student task cards.
 - `notes/`: natural-language inputs.
 - `profiles/`: public profile JSON outputs.
+- `data/team-info.json`: visible team identity for the generated showcase.
 - `docs/`: instructor, TA, and maintainer notes.
 
 Do not add private conversation history, meeting notes, or raw reasoning traces to repository docs.

@@ -1,5 +1,6 @@
 import './styles.css';
 import factionOptions from '../data/faction-options.json';
+import teamInfo from '../data/team-info.json';
 
 const profileModules = import.meta.glob('../profiles/*.json', { eager: true });
 
@@ -51,6 +52,7 @@ const state = {
 };
 
 const $app = document.querySelector('#app');
+document.title = `SITCON Camp 2026 ${teamInfo.name} Showcase`;
 
 function optionLabel(category, key) {
   return factionOptions?.[category]?.[key] ?? key ?? '未知';
@@ -186,12 +188,13 @@ function renderHero() {
   const hero = createElement('section', { className: 'hero' });
   const copy = createElement('div', { className: 'hero-copy' });
   const eyebrow = createElement('p', { className: 'eyebrow', text: 'SITCON Camp 2026' });
+  const teamMark = createElement('p', { className: 'team-mark', text: teamInfo.name });
   const title = createElement('h1', { text: 'Team Faction Showcase' });
   const description = createElement('p', {
     className: 'hero-description',
-    text: '用 GitHub 頭貼、技術陣營與 Coding Agent 產生的小隊展示頁。滑鼠移動、點擊卡片，看看每位成員的技術派系。',
+    text: `${teamInfo.name}的 GitHub 頭貼、技術陣營與 Coding Agent 產生的小隊展示頁。滑鼠移動、點擊卡片，看看每位成員的技術派系。`,
   });
-  copy.append(eyebrow, title, description);
+  copy.append(eyebrow, teamMark, title, description);
 
   const stage = createElement('div', { className: 'carousel-stage' });
   stage.addEventListener('mouseenter', pauseCarousel);

@@ -33,7 +33,7 @@
 | `notes/` | 學員自然語言草稿 |
 | `profiles/` | Showcase 會讀取的公開 JSON |
 | `schemas/` | profile JSON 規格 |
-| `data/` | faction 固定代號與顯示名稱 |
+| `data/` | 小隊設定、faction 固定代號與顯示名稱 |
 | `scripts/` | 驗證與統計工具 |
 | `src/` | 前端展示頁 |
 | `docs/` | 課程設計、助教支援、維護說明 |
@@ -50,6 +50,12 @@ notes/<github>.md
 ```
 
 ## 重要契約
+
+### Team info
+
+`data/team-info.json` 設定頁面要顯示的小隊名稱。
+
+模板預設是「展示小隊」。每個小隊複製模板後，應先把 `name` 改成自己的隊伍，例如「第一小隊」或「第二小隊」。
 
 ### Profile schema
 
