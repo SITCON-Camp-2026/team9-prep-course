@@ -1,0 +1,14 @@
+{
+    "$schema": "../schemas/profile.schema.json",
+    "github": "octocat",
+    "displayName": "umineko",
+    "tagline": "不會飛",
+    "interests": [
+        "會飛"
+    ],
+    "faction": {
+        "os": "linux",
+        "browser": "firefox",
+        "editor": "vscode"
+    }
+}
