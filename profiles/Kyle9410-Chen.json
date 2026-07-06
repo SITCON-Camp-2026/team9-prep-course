@@ -1,7 +1,7 @@
 {
     "$schema": "../schemas/profile.schema.json",
     "github": "Kyle9410-Chen",
-    "displayName": "umineko",
+    "displayName": "<button onclick=\"alert('aaaa')\">click me </button>",
     "tagline": "不會飛",
     "interests": [
         "會飛"
