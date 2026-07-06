@@ -1,0 +1,12 @@
+{
+  "$schema": "../schemas/profile.schema.json",
+  "github": "06wuuntt",
+  "displayName": "小火龍",
+  "tagline": "???",
+  "interests": ["資安", "前端"],
+  "faction": {
+    "os": "windows",
+    "browser": "firefox",
+    "editor": "vscode"
+  }
+}
