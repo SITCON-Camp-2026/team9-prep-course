@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
+import { validateProfile } from './validate-profiles.mjs';
 
 const root = process.cwd();
 const profilesDir = path.join(root, 'profiles');
@@ -20,7 +21,20 @@ async function loadProfiles() {
 
   const profiles = [];
   for (const file of files) {
-    const profile = JSON.parse(await fs.readFile(path.join(profilesDir, file), 'utf8'));
+    let profile;
+    try {
+      profile = JSON.parse(await fs.readFile(path.join(profilesDir, file), 'utf8'));
+    } catch (error) {
+      console.warn(`略過 ${file}: JSON 格式錯誤：${error.message}`);
+      continue;
+    }
+
+    const errors = validateProfile(profile, file);
+    if (errors.length > 0) {
+      console.warn(`略過 ${file}: ${errors.join('；')}`);
+      continue;
+    }
+
     profiles.push(profile);
   }
   return profiles;

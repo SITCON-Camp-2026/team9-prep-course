@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "preinstall": "node scripts/ensure-pnpm.mjs",
-    "dev": "vite --host 0.0.0.0",
-    "build": "vite build --base=./",
+    "dev": "node scripts/build-profiles.mjs && vite --host 0.0.0.0 --clearScreen false",
+    "build": "node scripts/build-profiles.mjs && vite build --base=./",
     "preview": "vite preview --host 0.0.0.0",
     "validate": "node scripts/validate-profiles.mjs",
     "stats": "node scripts/faction-stats.mjs"

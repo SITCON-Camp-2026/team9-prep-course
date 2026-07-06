@@ -1,8 +1,7 @@
 import './styles.css';
 import factionOptions from '../data/faction-options.json';
 import teamInfo from '../data/team-info.json';
-
-const profileModules = import.meta.glob('../profiles/*.json', { eager: true });
+import profiles from '../.generated/profiles.json';
 
 const fallbackProfiles = [
   {
@@ -39,10 +38,6 @@ const fallbackProfiles = [
     },
   },
 ];
-
-const profiles = Object.values(profileModules)
-  .map((module) => module.default)
-  .filter(Boolean);
 
 const teamProfiles = profiles.length > 0 ? profiles : fallbackProfiles;
 const state = {

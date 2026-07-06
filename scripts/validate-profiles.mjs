@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
+import { pathToFileURL } from 'node:url';
 
 const root = process.cwd();
 const profilesDir = path.join(root, 'profiles');
@@ -21,8 +22,12 @@ function pushIf(errors, condition, message) {
   if (condition) errors.push(message);
 }
 
-function validateProfile(profile, fileName) {
+export function validateProfile(profile, fileName) {
   const errors = [];
+
+  if (!profile || typeof profile !== 'object' || Array.isArray(profile)) {
+    return ['profile 必須是物件'];
+  }
 
   pushIf(errors, !isGitHubUsername(profile.github), '`github` 必須是有效的 GitHub 帳號格式');
   pushIf(errors, typeof profile.displayName !== 'string' || profile.displayName.trim().length === 0, '`displayName` 不可空白');
@@ -116,4 +121,6 @@ async function main() {
   console.log(`通過：共 ${jsonFiles.length} 份 profile。`);
 }
 
-await main();
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  await main();
+}

@@ -36,6 +36,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Validate profiles
+        continue-on-error: true
         run: pnpm validate
 
       - name: Build site

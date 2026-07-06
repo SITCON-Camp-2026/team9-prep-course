@@ -78,6 +78,8 @@ pnpm stats     # 統計 faction 人數
 pnpm build     # 產生靜態網站
 ```
 
+如果某份 profile JSON 有錯，`pnpm validate` 會失敗並指出要修的檔案；Showcase 和 Pages build 會略過錯誤的 profile，先呈現其他已完成的成員。
+
 ## GitHub Pages 部署
 
 這個模板已提供 GitHub Actions workflow：`.github/workflows/pages.yml`。
@@ -85,7 +87,7 @@ pnpm build     # 產生靜態網站
 當 `main` 或 `master` 有新的 push 時，workflow 會：
 
 1. 安裝 pnpm 相依套件。
-2. 執行 `pnpm validate`。
+2. 執行 `pnpm validate`，列出需要修正的 profile，但不阻擋部署。
 3. 執行 `pnpm build`。
 4. 將 `dist/` 部署到 GitHub Pages。
 
