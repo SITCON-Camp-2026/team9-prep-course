@@ -3,10 +3,10 @@
   "github": "06wuuntt",
   "displayName": "NT",
   "tagline": "???",
-  "interests": ["資安", "前端"],
+  "interests": ["前端", "資安"],
   "faction": {
     "os": "windows",
-    "browser": "firefox",
+    "browser": "other",
     "editor": "vscode"
   }
 }
