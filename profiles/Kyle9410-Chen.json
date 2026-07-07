@@ -2,13 +2,14 @@
     "$schema": "../schemas/profile.schema.json",
     "github": "Kyle9410-Chen",
     "displayName": "umineko",
-    "tagline": "不會飛",
+    "tagline": "其實不會飛",
     "interests": [
-        "會飛"
+        "後端",
+        "軟體工程"
     ],
     "faction": {
-        "os": "linux",
-        "browser": "firefox",
-        "editor": "vscode"
+        "os": "windows",
+        "browser": "chrome",
+        "editor": "jetbrains"
     }
 }
