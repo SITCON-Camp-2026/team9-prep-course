@@ -1,0 +1,15 @@
+{
+    "$schema": "../schemas/profile.schema.json",
+    "github": "ItzMrShrimp",
+    "displayName": "MrShrimp",
+    "tagline": "為了更流暢的玩Minecraft而踏入VPS和網路的深坑",
+    "interests": [
+        "網路",
+        "後端"
+    ],
+    "faction": {
+        "os": "windows",
+        "browser": "chrome",
+        "editor": "vscode"
+    }
+}
