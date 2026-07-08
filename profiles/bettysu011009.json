@@ -1,0 +1,14 @@
+{
+    "$schema": "../schemas/profile.schema.json",
+    "github": "bettysu011009",
+    "displayName": "蘇芷芸",
+    "tagline": "沒有珍奶會死的人",
+    "interests": [
+        "資安"
+    ],
+    "faction": {
+        "os": "windows",
+        "browser": "chrome",
+        "editor": "vscode"
+    }
+}
