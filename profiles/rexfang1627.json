@@ -1,0 +1,14 @@
+{
+    "$schema": "../schemas/profile.schema.json",
+    "github": "rexfang1627",
+    "displayName": "Rex",
+    "tagline": "喜歡用智慧解決問題",
+    "interests": [
+        "程式"
+    ],
+    "faction": {
+        "os": "windows",
+        "browser": "chrome",
+        "editor": "vscode"
+    }
+}
