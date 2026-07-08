@@ -1,12 +1,14 @@
 {
-  "$schema": "../schemas/profile.schema.json",
-  "github": "leeguanying1009",
-  "displayName": "李冠穎",
-  "tagline": "我是人",
-  "interests": ["競程"],
-  "faction": {
-    "os": "windows",
-    "browser": "chrome",
-    "editor": "other"
-  }
+    "$schema": "../schemas/profile.schema.json",
+    "github": "leeguanying1009",
+    "displayName": "李冠穎",
+    "tagline": "我是人",
+    "interests": [
+        "競程"
+    ],
+    "faction": {
+        "os": "windows",
+        "browser": "chrome",
+        "editor": "other"
+    }
 }
