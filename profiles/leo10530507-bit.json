@@ -1,0 +1,14 @@
+{
+    "$schema": "../schemas/profile.schema.json",
+    "github": "leo10530507-bit",
+    "displayName": "LCHLEO",
+    "tagline": "什麼都想學,什麼都不會",
+    "interests": [
+        "資安"
+    ],
+    "faction": {
+        "os": "windows",
+        "browser": "chrome",
+        "editor": "vscode"
+    }
+}
